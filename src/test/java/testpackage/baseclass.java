@@ -45,7 +45,8 @@ public class baseclass {
 		p.load(fis);
 		//String browser = p.getProperty("browser");
 		
-		System.out.println("i am runnning form git repository ");
+		// comment by ashish
+		
 		String browser = System.getProperty("browser");  // chrome , edge
 
 		if(browser!=null)
