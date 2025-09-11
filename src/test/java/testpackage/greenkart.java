@@ -18,9 +18,9 @@ public class greenkart extends baseclass {
 		for (String selectveg : veg)
 		{
 			System.out.println(selectveg);
-			dashboardOBj().addveg(selectveg);
+			d.addveg(selectveg);
 		}
-		basketObj().checkout(country);
+		b.checkout(country);
 	}
 	
 	

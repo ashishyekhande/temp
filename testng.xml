@@ -9,7 +9,7 @@
 
 	<test thread-count="5" name="Test">
 
-		<parameter name="country" value="Bar"></parameter>
+		<parameter name="country" value="India"></parameter>
 		<parameter name="url" value="https://rahulshettyacademy.com/seleniumPractise/"></parameter>
 		<classes>
 			<class name="testpackage.greenkart" />

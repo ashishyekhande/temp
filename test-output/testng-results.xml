@@ -1,111 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-01T17:46:43 IST" name="Suite" finished-at="2025-09-01T17:46:59 IST" duration-ms="15945">
+  <suite started-at="2025-09-11T17:24:30 IST" name="Suite" finished-at="2025-09-11T17:24:49 IST" duration-ms="18877">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-01T17:46:43 IST" name="Test" finished-at="2025-09-01T17:46:59 IST" duration-ms="15945">
-      <class name="stepdefinationloginclass.testrunnerlogin">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" started-at="2025-09-01T17:46:43 IST" name="setUpClass" finished-at="2025-09-01T17:46:44 IST" duration-ms="701" status="PASS">
+    <test started-at="2025-09-11T17:24:30 IST" name="Test" finished-at="2025-09-11T17:24:45 IST" duration-ms="15270">
+      <class name="testpackage.greenkart">
+        <test-method signature="checkoutEndToEnd(java.lang.String,java.lang.String)[pri:0, instance:testpackage.greenkart@6155d082]" started-at="2025-09-11T17:24:30 IST" name="checkoutEndToEnd" finished-at="2025-09-11T17:24:45 IST" duration-ms="14881" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@696b4a95]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" started-at="2025-09-01T17:46:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-01T17:46:48 IST" duration-ms="3385" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To Check loginwith diffrent user"]]>
+                <![CDATA[India]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["To check login frucntionality"]]>
+                <![CDATA[https://rahulshettyacademy.com/seleniumPractise/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" started-at="2025-09-01T17:46:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-01T17:46:49 IST" duration-ms="1697" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To Check loginwith diffrent user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["To check login frucntionality"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- checkoutEndToEnd -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.greenkart@6155d082]" started-at="2025-09-11T17:24:45 IST" name="terminate" finished-at="2025-09-11T17:24:45 IST" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" started-at="2025-09-01T17:46:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-01T17:46:51 IST" duration-ms="1626" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To Check loginwith diffrent user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["To check login frucntionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" started-at="2025-09-01T17:46:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-01T17:46:58 IST" duration-ms="6683" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To Check loginwith diffrent user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["To check login frucntionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" started-at="2025-09-01T17:46:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-01T17:46:59 IST" duration-ms="1751" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To Check loginwith diffrent user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["To check login frucntionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:stepdefinationloginclass.testrunnerlogin@3f4faf53]" started-at="2025-09-01T17:46:59 IST" name="tearDownClass" finished-at="2025-09-01T17:46:59 IST" duration-ms="48" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- stepdefinationloginclass.testrunnerlogin -->
+        </test-method> <!-- terminate -->
+      </class> <!-- testpackage.greenkart -->
     </test> <!-- Test -->
+    <test started-at="2025-09-11T17:24:30 IST" name="Test1" finished-at="2025-09-11T17:24:49 IST" duration-ms="18877">
+      <class name="testpackage.saucelabLogin">
+        <test-method signature="sauseloginTest(java.lang.String,java.lang.String)[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:31 IST" name="sauseloginTest" data-provider="exceldata" finished-at="2025-09-11T17:24:34 IST" duration-ms="2678" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sauseloginTest -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:34 IST" name="terminate" finished-at="2025-09-11T17:24:35 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+        <test-method signature="sauseloginTest(java.lang.String,java.lang.String)[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:35 IST" name="sauseloginTest" data-provider="exceldata" finished-at="2025-09-11T17:24:37 IST" duration-ms="2210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sauseloginTest -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:37 IST" name="terminate" finished-at="2025-09-11T17:24:37 IST" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+        <test-method signature="sauseloginTest(java.lang.String,java.lang.String)[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:37 IST" name="sauseloginTest" data-provider="exceldata" finished-at="2025-09-11T17:24:44 IST" duration-ms="7191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sauseloginTest -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:45 IST" name="terminate" finished-at="2025-09-11T17:24:45 IST" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+        <test-method signature="sauseloginTest(java.lang.String,java.lang.String)[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:45 IST" name="sauseloginTest" data-provider="exceldata" finished-at="2025-09-11T17:24:46 IST" duration-ms="1561" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[error_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sauseloginTest -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:47 IST" name="terminate" finished-at="2025-09-11T17:24:47 IST" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+        <test-method signature="sauseloginTest(java.lang.String,java.lang.String)[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:47 IST" name="sauseloginTest" data-provider="exceldata" finished-at="2025-09-11T17:24:48 IST" duration-ms="1550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[visual_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sauseloginTest -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:testpackage.saucelabLogin@6bbe2511]" started-at="2025-09-11T17:24:48 IST" name="terminate" finished-at="2025-09-11T17:24:49 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+      </class> <!-- testpackage.saucelabLogin -->
+    </test> <!-- Test1 -->
   </suite> <!-- Suite -->
 </testng-results>

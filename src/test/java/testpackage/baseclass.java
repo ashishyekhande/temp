@@ -32,55 +32,45 @@ import pages.dashboard;
 import pages.sausedemo;
 
 public class baseclass {
-	
+
 	public WebDriver w;
-	dashboard d;
-	basket b ;
-	sausedemo s;
-	
-	public void initalize() throws Exception
-	{
+	public dashboard d;
+	public basket b;
+	public sausedemo s;
+
+	public void initalize() throws Exception {
 		FileReader fis = new FileReader("./info.properties");
 		Properties p = new Properties();
 		p.load(fis);
-		//String browser = p.getProperty("browser");
-		
-		// comment by ashish
-		
-		// first person making chages
-		
-		String browser = System.getProperty("browser");  // chrome , edge
+		// String browser = p.getProperty("browser");
 
-		if(browser!=null)
-		{
+		String browser = System.getProperty("browser"); // chrome , edge
+		if (browser != null) {
 			browser = System.getProperty("browser");
-		}
-		else
-		{
+		} else {
 			browser = p.getProperty("browser");
 		}
-		
-		//This line will check if browser name is coming from terminal or not
-		// if coming from terminal then use else use from property
-		//String browser = System.getProperty("browser")!=null ? System.getProperty("browser")  :   p.getProperty("browser");
-				  //	    if                          true ?  (then) print this           :  (else)   this;
 
-		if (browser.contains("chrome")) // contains will check if string is having word "chrome"     chromeheadless
+		// This line will check if browser name is coming from terminal or not
+		// if coming from terminal then use else use from property
+		
+		// String browser = System.getProperty("browser")!=null ? System.getProperty("browser") : p.getProperty("browser");
+		//                      if true                         ? (then)   print this             : (else)   this;
+
+		if (browser.contains("chrome")) // contains will check if string is having word "chrome" chromeheadless
 		{
 			ChromeOptions op = new ChromeOptions();
-			op.addArguments("--incognito");   // till this point we are interested in incognito mode
-			
-			//this is added to check if we want to run in headless mode or not	 
-			if(browser.contains("headless")) // contains will check if string is having word "headless" 
+			op.addArguments("--incognito"); // till this point we are interested in incognito mode
+
+			// this is added to check if we want to run in headless mode or not
+			if (browser.contains("headless")) // contains will check if string is having word "headless"
 			{
 				op.addArguments("headless");
 			}
-			
 			w = new ChromeDriver(op);
 		}
 
-		else if (browser.equalsIgnoreCase("MicrosoftEdge")) 
-		{
+		else if (browser.equalsIgnoreCase("MicrosoftEdge")) {
 			EdgeOptions op = new EdgeOptions();
 			op.addArguments("inprivate");
 			w = new EdgeDriver(op);
@@ -89,81 +79,60 @@ public class baseclass {
 		w.manage().window().maximize();
 		w.manage().deleteAllCookies();
 		w.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		// creating object of page classes and passing webdriver instance to them
+		d = new dashboard(w);
+		b = new basket(w);
+		s = new sausedemo(w);
+
 	}
 
-		public String timestamp() 
-		{
-			SimpleDateFormat simple = new SimpleDateFormat("MMM dd HH.mm.ss");
-			String currentDateTime =simple.format(Calendar.getInstance().getTime());
-			return currentDateTime;
-	    }
-		
-	public File screenshot(WebDriver w, String testname) throws Exception //WebDriver w, String name
+	public String timestamp() {
+		SimpleDateFormat simple = new SimpleDateFormat("MMM dd HH.mm.ss");
+		String currentDateTime = simple.format(Calendar.getInstance().getTime());
+		return currentDateTime;
+	}
+
+	public File screenshot(WebDriver w, String testname) throws Exception // WebDriver w, String name
 	{
-		String time =timestamp();
-		TakesScreenshot ts = (TakesScreenshot) w; 
+		String time = timestamp();
+		TakesScreenshot ts = (TakesScreenshot) w;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("./Screenshot/"+testname+"_"+timestamp()+".png");
+		File dest = new File("./Screenshot/" + testname + "_" + timestamp() + ".png");
 		Files.copy(src, dest);
 		return dest;
 	}
-	
-	
-	public WebDriver openURl(String url) throws Exception
-	{
+
+	public WebDriver openURl(String url) throws Exception {
 		initalize();
 		w.get(url);
 		return w;
 	}
-	
-	public dashboard dashboardOBj() 
-	{
-		d = new dashboard(w);
-		return d;
-	}
-	
-	public basket basketObj()
-	{
-		b= new basket(w);
-		return b;
-	}
-	
-	public sausedemo sauseobj() {
-		s = new sausedemo(w);
-		return s;
-	}
-	
-	@AfterMethod  //@AfterTest
-	public void terminate()
-	{
+
+	@AfterMethod // @AfterTest
+	public void terminate() {
 		w.quit();
 	}
-	
-	
-	public ExtentReports extentreport()
-	{
+
+	public ExtentReports extentreport() {
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./Report/chekout.html");
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		return extent;
 	}
-	
-	
+
 	public String datareading() throws Exception {
-		
 		FileInputStream fis = new FileInputStream("./data/veg.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sh = wb.getSheetAt(0);
-		int rowcount = sh.getLastRowNum(); 
-		String veg ="";
-		for (int i = 1; i < rowcount; i++) 
-		{
-			 veg = veg+ sh.getRow(i).getCell(0).getStringCellValue() +",";  //veg =, brinjal, brovcoli, beetrrot , beans
-			
+		int rowcount = sh.getLastRowNum();
+		String veg = "", veglist = "";
+		for (int i = 1; i < rowcount; i++) {
+			veg = sh.getRow(i).getCell(0).getStringCellValue();
+			veglist = veglist + veg + ","; // veglist =, brinjal, brovcoli, beetrrot , beans
 		}
-		
-		return veg;
+
+		return veglist;
 	}
-	
-	
+
 }

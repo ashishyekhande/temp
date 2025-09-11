@@ -16,14 +16,12 @@ import pages.sausedemo;
 
 //@Listeners(listen.class)
 public class saucelabLogin extends baseclass {
-	public dashboard d;
-	public sausedemo s ;
-
+	
 	@Test(dataProvider = "exceldata")
 	public void sauseloginTest(String user ,String pass)throws Exception 
 	{
 		openURl("https://www.saucedemo.com/");
-		s=sauseobj();
+		//s=sauseobj();
 		s.loginTest(user,pass) ;	
 	}
 	

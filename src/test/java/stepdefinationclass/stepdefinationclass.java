@@ -24,14 +24,14 @@ public class stepdefinationclass extends baseclass
 		for (String selectveg : veg)
 		{
 			System.out.println(selectveg);
-			dashboardOBj().addveg(selectveg);
+			d.addveg(selectveg);
 		}
 	}
 
 	@And("checkout is done")
 	public void checkout_is_done() throws Exception
 	{
-		basketObj().checkout("Barbados");
+		b.checkout("Barbados");
 	}
 	
 	@Then("success messgae should be displayed")
